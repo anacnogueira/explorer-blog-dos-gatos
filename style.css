@@ -33,16 +33,22 @@ h3 {
 
 h3 {
   font-size: 1.125rem;
+  line-height: 100%;
 }
 
 /* img {
   width: 100%;
   height: auto;
-  display: block;
 } */
 
 .text-sm {
   font-size: var(--text-sm);
+}
+
+.container {
+  /* padding-inline: 1.25rem; */
+  max-width: calc(24rem + (1.25rem * 2));
+  margin-inline: auto;
 }
 
 /* HEADER */
@@ -54,6 +60,7 @@ header {
 header a {
   line-height: 0;
 }
+
 header .container {
   max-width: 23.375rem;
   margin-inline: auto;
@@ -106,4 +113,38 @@ button:hover {
 
 main p {
   margin-top: 1rem;
+}
+
+/* ASIDE */
+aside {
+  margin-top: 2rem;
+}
+
+aside section {
+  margin-top: 1rem;
+  display: grid;
+  gap: 2rem;
+}
+
+section article {
+  display: grid;
+  grid-template-columns: 9.375rem 1fr;
+  gap: 1rem;
+}
+
+section article p {
+  margin-top: 0.75rem;
+}
+
+article img {
+  border-radius: 5px;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--brand-primary);
+  color: #fff;
+  text-align: center;
+  padding-block: 1.5rem;
+  margin-top: 2.5rem;
 }
