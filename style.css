@@ -6,9 +6,9 @@
 }
 
 :root {
-  --brand-primary: #065e7c;
-  --title-primary: #202024;
-  --text-primary: #121214;
+  --brand-primary: hsl(195, 46%, 40%);
+  --title-primary: hsl(240, 6%, 13%);
+  --text-primary: hsl(240, 5%, 7%);
 
   --text-base: 1rem;
   --text-sm: 0.875rem;
@@ -36,10 +36,10 @@ h3 {
   line-height: 100%;
 }
 
-/* img {
+img {
   width: 100%;
   height: auto;
-} */
+}
 
 .text-sm {
   font-size: var(--text-sm);
@@ -147,4 +147,59 @@ footer {
   text-align: center;
   padding-block: 1.5rem;
   margin-top: 2.5rem;
+}
+
+@media (width > 80rem) {
+  #app {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "main aside"
+      "footer footer";
+    gap: 2.5rem 2rem;
+  }
+
+  header .container,
+  .container {
+    max-width: initial;
+    margin: initial;
+    padding: initial;
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  header .container {
+    max-width: 76rem;
+    margin-inline: auto;
+  }
+
+  header form {
+    flex: 1;
+  }
+
+  header form input {
+    width: 100%;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  main.container {
+    max-width: 50rem;
+  }
+
+  aside {
+    grid-area: aside;
+  }
+
+  aside.container {
+    max-width: 24rem;
+  }
+
+  footer {
+    grid-area: footer;
+  }
 }
